@@ -17,44 +17,53 @@ State Space : {s1(start),s2,s3,s4(goal)}
 Sample State : Start
 
 ### Action Space
-A 
-1
-​
- : Move arm to the product location.
-𝐴
-2
-A 
-2
-​
- : Pick up the product.
-𝐴
-3
-A 
-3
-​
- : Move arm towards the goal node.
-𝐴
-4
-A 
-4
-​
- : Place the product on the goal node.
+A 1 : Move arm to the product location. 
+
+𝐴 2 : Pick up the product.
+
+𝐴 3 : Move arm towards the goal node.
+
+𝐴 4 : Place the product on the goal node.
 
 ### Sample Action
-Write your answer here
+Sample Action : A2 Pick up yhe Product 
 
 ### Reward Function
-Write your answer here
+Reward Function : { +1 , When reaching on the Goal State } Reward Function : { 0 , Otherwise }
 
 ### Graphical Representation
-Write your answer here
+
+![image](https://github.com/user-attachments/assets/a2dfbacc-4c38-4a65-934d-5fe237eef9a3)
+![image](https://github.com/user-attachments/assets/ff77e40c-21ee-4e80-8629-deeea9eedab8)
+
 
 ## PYTHON REPRESENTATION:
-Write your code here
+```python
+p = {
+    -1: {
+        0:[(1.0,-1,0.0,True)],
+        1:[(0.8,0,0.0,False),(0.2,-1,0.0,True)]
+    },
+    0: {
+        0:[(0.8,-1,0.0,True),(0.2,0,0.0,False)],
+        1:[(0.8,1,0.0,False),(0.2,0,0.0,False)]
+    },
+    1: {
+        0:[(0.8,0,0.0,False),(0.2,1,0.0,False)],
+        1:[(0.8,2,+1.0,True),(0.2,1,0.0,False)]
+    },
+    2: {
+        0:[(1.0,2,0.0,True)],
+        1:[(1.0,2,0.0,True)]
+    }
+
+}
+```
 
 ## OUTPUT:
-Write your Python output here
+![image](https://github.com/user-attachments/assets/8d31bf01-4c43-463a-98ec-e57bd719d852)
+
 
 ## RESULT:
-Write your output here
+Thus the given real world problem is successfully represented in a MDP form.
 
